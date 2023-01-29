@@ -9,15 +9,56 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/64d3d9d709.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
+	<!--<a href="#modal1" style="display: none;" class="js-modal" > ouvrir la boite modal</a>-->
+
+	<aside id="modal1" class="modal" aria-hidden="true" role="dialogue" style="display: none;">
+		<div class="modal-wrapper js-modal-stop">
+			<div class="btnclosemodal">
+				<button class="js-retour-modal" style="display: none;"><i class="fa-solid fa-arrow-left"></i></button>
+				<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
+			</div>
+			<div class="toutelamodal" style="display: null;">
+			<h2>Galerie photo</h2>
+			<div class="galleryModal"></div>
+			<button class="btn-envoyer-photo">Ajouter une photo</button>
+			<a href="#">Supprimer la galerie</a>
+			</div>
+			<div class="modal2" style="display: none;">
+				<h2>Ajout photo</h2>
+			<!--<form action="./assets/js/script.js" method="post" enctype="multipart/form-data" class="formmod"> -->
+				<div class="none">
+					<i class="fa-solid fa-image"></i>
+					<label for="image_telechargé" class="labelimage">+ Ajouter photo</label>
+					<p class="momax">jpg, png : 4mo max</p>
+					<input type="file" id="image_telechargé" name="image_telechargé" accept=".png">
+				  </div>
+				  <div class="visualisation" style="display: none;">
+				  </div>
+				<label class="labelmod">Titre</label><br>
+				<input type="text" class="inputtitre" id="titrephoto">
+				<label class="labelmod">Catégories</label><br>
+				<select id="categoriephoto">
+					<option class="optionselectobjets">Objets</option>
+					<option class="optionselectAppartements">Appartements</option>
+					<option class="optionselectHotrest">Hôtels et restaurants</option>
+				</select>
+			<!-- </form> -->
+			<button class="btn-valider-photo">Valider</button>
+		</div>
+		</div>
+	</aside>
+
 	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li>login</li>
+			<li><a href="login.html" class="connexion" style="display: null;">login</a></li>
+			<li><a href="#" class="deconnexion" style="display: none;" id="deconnexion">logout</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -35,9 +76,18 @@
 		</article>
 	</section>
 	<section id="portfolio">
+		<div class="modifModal">
 		<h2>Mes Projets</h2>
+		<a href="#modal1" style="display: none;" class="js-modal" ><i class="fa-solid fa-pen-to-square"></i>modifier</a>
+		</div>
+		<div class="toutBouton">
+		<button class="btn-filtrer-Tous">Tous</button>
+		<button class="btn-filtrer-Objets">Objets</button>
+		<button class="btn-filtrer-Appartements">Appartements</button>
+		<button class="btn-filtrer-Hôtels-et-restaurants">Hôtels et restaurants</button>
+		</div>
 		<div class="gallery">
-			<figure>
+			<!--<figure>
 				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
 				<figcaption>Abajour Tahina</figcaption>
 			</figure>
@@ -80,7 +130,7 @@
 			<figure>
 				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
 				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure>
+			</figure>-->
 		</div>
 	</section>
 	<section id="contact">
@@ -105,5 +155,6 @@
 		</ul>
 	</nav>
 </footer>
+<script type="module" src="./assets/js/scripttest.js"></script>
 </body>
 </html>
