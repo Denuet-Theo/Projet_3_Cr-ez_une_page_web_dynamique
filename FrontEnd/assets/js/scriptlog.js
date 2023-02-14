@@ -23,7 +23,7 @@ console.log(token);
 
 
 if (response.ok ){
-  alert ('Bienvenue !');
+  // alert ('Bienvenue !');
   window.location.assign("index.html");
   window.sessionStorage.setItem("token", token);
 }else{

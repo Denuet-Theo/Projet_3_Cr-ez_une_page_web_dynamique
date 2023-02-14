@@ -12,8 +12,9 @@
 </head>
 
 <body>
-
+<div id="bloc_page">
 <header>
+	<div class="separateurheader">
     <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
 		<ul>
@@ -23,6 +24,7 @@
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
+</div>
 </header>
 
 <main>
@@ -30,12 +32,12 @@
         <h2>Log In</h2>
 		<p id="erreur"></p>
         <div class="formulaire">
-            <form method="POST" action="./assets/js/scriptlog.js" class="form">
+            <!-- <form method="POST" action="./assets/js/scriptlog.js" class="form"> -->
                 <label for="email">E-mail</label><br>
                <input type="email" name="email" id="email"><br>
                 <label for="mdp">Mot de passe</label><br>
                <input type="password" name="mdp" id="mdp">
-            </form>
+            <!-- </form> -->
            <button id="btnValider">Se connecter</button>
         <div class="mdp-oubli">
             <a href="#">Mot de passe oublié</a>
@@ -50,6 +52,7 @@
 		</ul>
 	</nav>
 </footer>
+</div>
 <script src="./assets/js/scriptlog.js"></script>
 </body>
 

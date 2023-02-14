@@ -51,17 +51,24 @@ table {
 	border-spacing: 0;
 }
 /** end reset css**/
-body {
+/*body {
 	max-width: 1140px;
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+}*/
+
+#bloc_page{
+	max-width: 1140px;
+    margin: auto;
+    font-family: 'Work Sans';
+    font-size: 14px;
 }
-header {
+/*header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0
-}
+}*/
 section {
 	margin: 50px 0
 }
@@ -116,11 +123,23 @@ li:hover {
 	width: 80%;
 }
 
+.sousportrait{
+	margin: auto;
+	width: 80%;
+	margin-top: 15px;
+	
+}
+
+.js-modal2, .js-modal1{
+color: #000000;
+}
+
 #introduction article {
 	flex: 1
 }
 #introduction h2 {
 	margin-bottom: 1em;
+	margin-top: 19px;
 }
 
 #introduction p {
@@ -218,17 +237,19 @@ color: #000000;
 }
 
 .formulaire{
-	width:34%; 
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	
 }
 
-form input{
+.formulaire input{
 	width: 100%;
 	height: 51px;
-	margin-bottom: 37px;
-	background: #FFFFFF;
+	margin-bottom: 32px;
 	border: none;
 	outline: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.11);
 }
 
 #btnValider{
@@ -307,7 +328,7 @@ form input{
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 1em;
-	margin-top: 139px;
+	margin-top: 108px;
 }
 
 .modifModal a{
@@ -323,13 +344,21 @@ margin: 32px 35px 0px 30px;
 
 .js-retour-modal{
 	margin-right: 85%;
+	width:30px;
+	height:30px;
+	background-color:transparent;
+	border:none;
 }
 
-
+.fa-xmark, .fa-arrow-left{
+	font-size: 20px;
+}
 
 .modal-wrapper .js-modal-close{
 	width: 30px;
 	height: 30px;
+	background-color:transparent;
+	border:none;
 }
 
 .modal-wrapper h2{
@@ -344,7 +373,7 @@ margin: 32px 35px 0px 30px;
 	row-gap: 8px;
 	justify-content: center;
 	border-bottom: 1px solid #B3B3B3;
-	/*padding-bottom: 46px;*/
+	padding-bottom: 46px;
 	width: 67%;
 	margin: auto;
 	
@@ -359,6 +388,7 @@ margin: 32px 35px 0px 30px;
 }
 
 .btn-envoyer-photo {
+	border: none;
 	margin: auto;
 	display: block;
 	margin-top: 38px;
@@ -409,16 +439,15 @@ margin: 32px 35px 0px 30px;
 	display: flex;
 	justify-content: end;
 	flex-direction: row-reverse;
-	width: 100%;
-	
+	width: 100%;	
 }
 
-.formmod{width: 70%;
-margin: auto;
-border-bottom: 1px solid #B3B3B3;
-padding-bottom:47px;
+.formulaireModal{
+	width: 70%;
+	margin: auto;
+	border-bottom: 1px solid #B3B3B3;
+	padding-bottom: 47px;
 }
-
 
 .none {
     display: flex;
@@ -428,9 +457,10 @@ padding-bottom:47px;
     justify-content: space-around;
     height: 100%;
 	background-color:  #E8F1F7;
-	height: 169px;
+	width: 100%;
 	margin-bottom: 30px;
   }
+
 
 i.fa-image{
 	font-size: 55px;
@@ -443,10 +473,10 @@ font-size: 10px;
 color: #444444;
 }
 
-  .visualisation{
+.visualisation{
     display: flex;
     justify-content: center;
-    width: 100%;
+	width: 100%;
     height: 169px;
     margin: auto;
 	background-color:  #E8F1F7;
@@ -454,21 +484,18 @@ color: #444444;
 	margin-bottom: 30px;
   }
 
-    .formmod img {
-      height: 100%;
-      width: 30%;
-      order: 1;
-	  object-fit: cover;
-    }
+img.nouvellephoto{
+	width: 35%;
+}
 
-    #image_telechargé{display: none;}
+#image_telechargé{display: none;}
 
-    .labelimage {
-		background: #CBD6DC;
-		border-radius: 50px;
-      padding: 10px 15px;
-      font-size: 0.8rem;
-      width: 30%;
+.labelimage {
+	background: #CBD6DC;
+	border-radius: 50px;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    width: 30%;
 	font-size: 14px;
 	color: #306685;
 	display: flex;
@@ -477,18 +504,26 @@ color: #444444;
 	margin-bottom: 10px;
     }
 
-	.labelmod{
-color: #3D3D3D;
-	}
+.labelmod{
+	color: #3D3D3D;
+}
 
 select{
 	width:100%;
 	margin-top: 10px;
 	height: 51px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	border: none;
+	outline: none;
 }
 
 .inputtitre{
-	margin-top: 10px;
+	margin: 10px 0px 21px 0px;
+	border: none;
+	width: 100%;
+	height: 51px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	outline: none;
 }
 
 .btn-valider-photo{
@@ -503,5 +538,47 @@ width: 35%;
 color: white;
 font-family: 'Syne';
 font-size: 14px;
+}
 
+.bandenoir{
+	width:100%;
+	background-color: #000000;
+	height: 59px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bandenoir p{
+	color: #ffffff;
+	margin-right: 21px;
+}
+
+.publier{
+	background-color: #fff;
+	color: #000000;
+	border-radius: 60px;
+	height: 38px;
+	padding: 0px 15px 0px 15px;
+	font-family: 'Work Sans';
+font-size: 14px;
+font-weight: bold;
+}
+
+.separateurheader{
+	display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.separateurheader a{
+	font-size: 16px;
+	color: #000000;
+}
+
+.titreajoutphoto{
+font-family: 'Work Sans';
+font-weight: 400;
+font-size: 26px;
+color: #000000;
 }
