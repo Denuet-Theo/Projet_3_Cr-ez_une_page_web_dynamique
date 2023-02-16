@@ -103,7 +103,7 @@ const closeModal = function (e) {
 
        verifcategorie = false;
        verifimage = false;
-       veriftitre = false;
+       testtitre = false;
       //-----------------------------------------------------------------------------------------------------------------------
 };
 
@@ -501,12 +501,12 @@ optionnull.value = 0;
 //-----------------------------------------------------------------------------------------------------------------------
 let verifcategorie = false;
 let verifimage = false;
-let veriftitre = false;
+let testtitre = false;
 function enleverDisabled() {
     document.querySelector(".btn-valider-photo").addEventListener("click", function () {
-    verifcategorie = false;
-    verifimage = false;
-    veriftitre = false;
+     verifcategorie = false;
+     verifimage = false;
+     testtitre = false;
     // console.log('rrr')
     });
  
@@ -515,7 +515,7 @@ function enleverDisabled() {
   document.getElementById("categoriephoto").onchange = function () {
     validcategorie();
     console.log(verifcategorie);
-    if (verifcategorie && verifimage && veriftitre) {
+    if (verifcategorie && verifimage && testtitre) {
       document.querySelector(".btn-valider-photo").disabled = false;
       btnvaliderphoto.style.backgroundColor = "#1D6154";
     }else{
@@ -526,7 +526,7 @@ function enleverDisabled() {
 
   document.getElementById("titrephoto").onkeyup = function () {
     validtitre();
-    if (verifcategorie && verifimage && veriftitre) {
+    if (verifcategorie && verifimage && testtitre) {
       document.querySelector(".btn-valider-photo").disabled = false;
       btnvaliderphoto.style.backgroundColor = "#1D6154";
     }else{
@@ -537,7 +537,7 @@ function enleverDisabled() {
   document.getElementById("image_telechargé").onchange = function () {
     validimage();
     console.log(verifimage);
-    if (verifcategorie && verifimage && veriftitre) {
+    if (verifcategorie && verifimage && testtitre) {
       document.querySelector(".btn-valider-photo").disabled = false;
       btnvaliderphoto.style.backgroundColor = "#1D6154";
     }else{
@@ -557,17 +557,9 @@ const validcategorie = function () {
 };
 
 const validtitre = function () {
-  let titreverifregexp = new RegExp("^[a-zA-Z0-9.-_]+", "g");
-  let testtitre = titreverifregexp.test(
-    document.getElementById("titrephoto").value
-  );
+  let titreverifregexp = new RegExp('^[a-zA-Z0-9 -_.]{3,25}$', 'g');
+   testtitre = titreverifregexp.test(document.getElementById("titrephoto").value);
   console.log(testtitre);
-  if (validtitre && document.getElementById("titrephoto").value !== "" ) {
-    veriftitre = true;
-  } else {
-    veriftitre = false;
-  }
-  return veriftitre;
 };
 
 const validimage = function () {
