@@ -1,4 +1,5 @@
 let lien = document.querySelector(".js-modal");
+let btnfiltrage = document.querySelector(".toutBouton")
 let login = document.querySelector(".connexion");
 let logout = document.querySelector(".deconnexion");
 let bandenoir = document.querySelector(".bandenoir");
@@ -243,7 +244,7 @@ function verificationformulaireajout() {
     document.getElementById("image_telechargé").files.length !== 0
   ) {
     Valider = true;
-    alert("Projet envoyé");
+    alert("Photo envoyée");
   } else {
     Valider = false;
     alert("Formulaire incomplet");
@@ -336,6 +337,7 @@ function afficherPicto() {
         bandenoir.style.display = null;
         lien1.style.display = null;
         lien2.style.display = null;
+        btnfiltrage.style.display = "none"
       }
     });
 }
